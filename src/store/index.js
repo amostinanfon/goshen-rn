@@ -1,5 +1,5 @@
 export { buyCake } from './items/cakes/cakeActions';
 
-export { buyiceCream } from './iceCream/iceCreamActions';
+export { buyiceCream } from './items/iceCream/iceCreamActions';
 
-export * from './user/userActions'
+export * from './items/user/userActions'
