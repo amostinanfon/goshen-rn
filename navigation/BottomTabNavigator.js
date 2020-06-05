@@ -5,6 +5,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../src/screens/HomeScreen';
 import LinksScreen from '../src/screens/LinksScreen';
 import LoginScreen from '../src/screens/LoginScreen';
+import ResetScreen from '../src/screens/ResetScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -21,7 +22,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Get Started',
+          title: 'Home Page',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
         }}
       />
@@ -41,6 +42,14 @@ export default function BottomTabNavigator({ navigation, route }) {
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-checkmark-circle" />,
         }}
       />
+      <BottomTab.Screen
+        name="Reset"
+        component={ResetScreen}
+        options={{
+          title: 'Reset Password',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-checkmark-circle" />,
+        }}
+      />
     </BottomTab.Navigator>
   );
 }
@@ -55,5 +64,7 @@ function getHeaderTitle(route) {
       return 'Links to learn more';
     case 'Login':
       return 'Login Page';
+    case 'Reset':
+      return 'Reset Password Page';
   }
 }

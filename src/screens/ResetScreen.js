@@ -27,23 +27,18 @@ export default class Login extends Component {
 
                 <Text 
                     style={styles.header}>
-                    Connectez-vous
+                    Mot de Passe oublié
                 </Text>
                 <View style={styles.textInput}>
-                    <TextInput placeholder='Username' style={styles.text}/>
-                    <TextInput placeholder='Password' style={styles.text}/>
+                    <TextInput placeholder='Adresse Email' style={styles.text}/>
                 </View>
-                <View style={{flexDirection:"row"}}>
-                    <CheckBox 
-                        //style={styles.button2}
-                        checkedIcon='dot-circle-o'
-                    />
-                    <Text style={{paddingTop: 5}}> Se souvenir de moi</Text>
-                    <Text style={{paddingTop:5,paddingLeft: 25, fontWeight: 'bold'}}>Mot de passe oublie ?</Text>
+                <View style={{flexDirection:"column"}}>
+                    <Text>Saisissez votre adresse email et vous recevrez un</Text>
+                    <Text style={{paddingTop:5,marginBottom:10}}>lien  votre pour renitialiser votre mot de passe</Text>
                 </View>
                 <Button 
-                          onPress={() => Alert.alert('Right button pressed')}
-                          title="Connection"
+                          onPress={() => Alert.alert('Reset Button pressed')}
+                          title="Envoyer  le  lien  par  mail"
                           style={{backgroundColor:'blue'}}
                           style={styles.button}
                 />
@@ -54,19 +49,16 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     header: {
-        fontSize: 37,
+        fontSize: 27,
         marginTop: 10,
-        marginBottom: 10,
         marginLeft: 20,
         fontStyle: 'normal',
         fontWeight: 'bold'
     },
     textInput: {
-        height: 100,
+        height: 150,
         justifyContent: 'center',
-        marginTop: 10,
-        marginBottom: 15,
-        //qtextAlign: 'center',
+        //textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
  
@@ -77,7 +69,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     button: {
-     paddingTop: 20
+     paddingTop: 10
     },
     image: {
         //flex:1,

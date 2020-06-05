@@ -8,7 +8,8 @@ export default {
       screens: {
         Home: 'home',
         Links: 'links',
-        Login: 'login'
+        Login: 'login',
+        Reset: 'reset'
       },
     },
   },
